@@ -11,6 +11,13 @@
 
 ## Verwendung
 
+### Scopes einstellen
+
+- Maven: https://docs.github.com/en/packages/guides/configuring-apache-maven-for-use-with-github-packages
+- NPM: https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages
+
+### GitHub Personal Access Tokens
+
 > ✋ **GitHub Personal Access Tokens** ist glaube bei öffentlichen Repositories garnicht notwendig.
 
 Projekte die die versionierten Artefakt der Projektassistent-OpenAPI wiederverwenden möchten, müssen das mittels eines **GitHub Personal Access Tokens** (https://github.com/settings/tokens) tun.
