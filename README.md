@@ -20,7 +20,8 @@
 
 ### GitHub Personal Access Tokens
 
-> ✋ **GitHub Personal Access Tokens** ist glaube bei öffentlichen Repositories garnicht notwendig.
+> ✋ **GitHub Personal Access Tokens** ist glaube bei öffentlichen Repositories garnicht notwendig.<br>
+> 💡 -> https://github.community/t/how-to-allow-unauthorised-read-access-to-github-packages-maven-repository/115517
 
 Projekte die die versionierten Artefakt der Projektassistent-OpenAPI wiederverwenden möchten, müssen das mittels eines **GitHub Personal Access Tokens** (https://github.com/settings/tokens) tun.
 
