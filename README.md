@@ -11,7 +11,7 @@
 
 ## Verwendung
 
-> **GitHub Personal Access Tokens** ist glaube bei öffentlichen Repositories garnicht notwendig.
+> ✋ **GitHub Personal Access Tokens** ist glaube bei öffentlichen Repositories garnicht notwendig.
 
 Projekte die die versionierten Artefakt der Projektassistent-OpenAPI wiederverwenden möchten, müssen das mittels eines **GitHub Personal Access Tokens** (https://github.com/settings/tokens) tun.
 
