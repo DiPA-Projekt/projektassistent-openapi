@@ -1,0 +1,18 @@
+{
+  "name": "@dipa-project/projektassistent-openapi",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "build": "rm -rf generated && npm run generate:openapi && npm run generate:spring && npm run generate:typescript-rxjs",
+    "generate:openapi": "openapi-generator-cli generate -g openapi -i src/openapi.yml -o dist/openapi",
+    "generate:spring": "openapi-generator-cli generate -g spring -i src/openapi.yml -o dist/spring -c config/spring.json",
+    "generate:typescript-rxjs": "openapi-generator-cli generate -g typescript-rxjs -o dist/typescript-rxjs -i src/openapi.yml -c config/typescript-rxjs.json",
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "update": "ncu -t minor -u && npm install"
+  },
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "2.2.2",
+    "autochangelog": "3.0.3",
+    "npm-check-updates": "11.3.0"
+  }
+}

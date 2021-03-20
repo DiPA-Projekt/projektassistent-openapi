@@ -1,0 +1,11 @@
+{
+  "groupId": "online.dipa",
+  "artifactDescription": "DiPA - projektassistent-openapi",
+  "scmUrl": "https://github.com/DiPA-Projekt/projectassistent-openapi",
+  "hideGenerationTimestamp": true,
+  "artifactId": "projektassistent-openapi",
+  "artifactVersion": "0.0.1",
+  "apiPackage": "online.dipa.projektassistent-openapi",
+  "modelPackage": "online.dipa.projektassistent-openapi",
+  "interfaceOnly": true
+}

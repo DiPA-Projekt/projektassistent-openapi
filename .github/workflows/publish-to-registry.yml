@@ -1,0 +1,71 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: GitHub CI - Publish to MAVEN- and NPM-Package
+
+on:
+  release:
+    types:
+      - published
+
+env:
+  NPM_SCOPE: dipa-projekt
+  PROJECT_NAME: projektassistent-openapi
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: 14.x
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@${{ env.NPM_SCOPE }}"
+      - name: Restore cache
+        uses: actions/cache@v2.1.4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+      - name: Install dependencies
+        run: npm ci
+      - name: Convert yml2json
+        run: npx openapi-generator-cli generate -g openapi -i src/openapi.yml -o dist/openapi
+      - name: Read OpenAPI
+        id: openapi
+        run: |
+          content=`cat dist/openapi/openapi.json | tr -d "\n"`
+          echo "::set-output name=json::$content"
+      - name: Configure Spring
+        run: node scripts/configure-spring.js ${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
+      - name: Generate API for Maven
+        run: npx openapi-generator-cli generate -g spring -i src/openapi.yml -c config/spring.json -o dist/spring
+      - name: Generate API for NPM
+        run: npx openapi-generator-cli generate -g typescript-rxjs -i src/openapi.yml -c config/typescript-rxjs.json -o dist/typescript-rxjs
+      - name: Configure maven pom
+        run: node scripts/config-maven-pom.js ${{ env.NPM_SCOPE }} ${{ env.PROJECT_NAME }}
+      - name: Create package.json
+        run: node scripts/create-package-json.js ${{ env.NPM_SCOPE }}/${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
+      - name: Remove tsconfig.json
+        run: rm tsconfig.json
+        working-directory: dist/typescript-rxjs
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Validate and publish Maven-Package
+        run: |
+          mvn clean compile
+          mvn -B deploy
+        working-directory: dist/spring
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate and publish NPM-Package
+        run: |
+          npm install
+          npm publish --access restricted
+        working-directory: dist/typescript-rxjs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
