@@ -17,11 +17,6 @@
 
 Projekte die die versionierten Artefakt der Projektassistent-OpenAPI wiederverwenden möchten, müssen das mittels des **GitHub Personal Access Tokens** (https://github.com/settings/tokens) tun.
 
-| Secret                 | Wert                                     |
-| ---------------------- | ---------------------------------------- |
-| GIT_HUB_PACKAGES_TOKEN | d6f4529dbc8f999e9eb988ec0d29689c564d59a4 |
-| GIT_HUB_PACKAGES_USER  | deleonio                                 |
-
 Für die **GitHub-Workflows** wurden die beiden _Secrets_ **GitHub Personal Access Tokens** und **Benutzername** in den **Organisationseinstellungen** (https://github.com/organizations/DiPA-Projekt/settings/secrets/actions) hinterlegt. Die **GitHub-Workflows** in unsere GitHub-Organisation können diesen über den Secret-Namen `GIT_HUB_PACKAGES_TOKEN` und  `GIT_HUB_PACKAGES_USER` zum Installieren von Abhängigkeiten aus unseren Organisationsrepository verwenden.
 
 ### Scopes einstellen
