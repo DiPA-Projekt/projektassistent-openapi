@@ -4,23 +4,23 @@ let pomXml = fs.readFileSync("dist/java/pom.xml", {
 });
 console.log(pomXml);
 
-pomXml = pomXml.replace(
-  /<\/build>/,
-  ` <plugins><plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-source-plugin</artifactId>
-  <version>3.2.0</version>
-  <executions>
-    <execution>
-      <id>attach-sources</id>
-      <goals>
-        <goal>jar</goal>
-      </goals>
-    </execution>
-  </executions>
-  </plugin></plugins>
-  </build>`
-);
+// pomXml = pomXml.replace(
+//   /<\/build>/,
+//   ` <plugins><plugin>
+//   <groupId>org.apache.maven.plugins</groupId>
+//   <artifactId>maven-source-plugin</artifactId>
+//   <version>3.2.0</version>
+//   <executions>
+//     <execution>
+//       <id>attach-sources</id>
+//       <goals>
+//         <goal>jar</goal>
+//       </goals>
+//     </execution>
+//   </executions>
+//   </plugin></plugins>
+//   </build>`
+// );
 pomXml = pomXml.replace(
   /<\/project>/,
   `  <distributionManagement>

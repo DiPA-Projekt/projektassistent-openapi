@@ -1,0 +1,19 @@
+{
+  "groupId": "online.dipa",
+  "artifactDescription": "DiPA - projektassistent-openapi",
+  "scmUrl": "https://github.com/DiPA-Projekt/projectassistent-openapi",
+  "hideGenerationTimestamp": true,
+  "artifactId": "projektassistent-openapi-java",
+  "artifactVersion": "0.0.2",
+  "apiPackage": "online.dipa.projektassistent.openapi.java.api",
+  "modelPackage": "online.dipa.projektassistent.openapi.java.model",
+  "interfaceOnly": true,
+  "generateSupportingFiles": false,
+  "generateModelTests": false,
+  "generateModelDocumentation": false,
+  "generateApiDocumentation": false,
+  "generateApiTests": false,
+  "serializableModel": true,
+  "snapshotVersion": false,
+  "useTags": true
+}
