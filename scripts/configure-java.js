@@ -1,15 +1,15 @@
 const fs = require("fs");
 fs.writeFileSync(
-  "config/spring.json",
+  "config/java.json",
   `{
   "groupId": "online.dipa",
   "artifactDescription": "DiPA - ${process.argv[2]}",
   "scmUrl": "https://github.com/DiPA-Projekt/projectassistent-openapi",
   "hideGenerationTimestamp": true,
-  "artifactId": "${process.argv[2]}",
-  "artifactVersion": "${process.argv[3]}-spring",
-  "apiPackage": "online.dipa.projektassistent.openapi.spring.api",
-  "modelPackage": "online.dipa.projektassistent.openapi.spring.model",
+  "artifactId": "${process.argv[2]}-java",
+  "artifactVersion": "${process.argv[3]}",
+  "apiPackage": "online.dipa.projektassistent.openapi.java.api",
+  "modelPackage": "online.dipa.projektassistent.openapi.java.model",
   "interfaceOnly": true,
   "generateSupportingFiles": false,
   "generateModelTests": false,
