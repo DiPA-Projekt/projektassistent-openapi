@@ -8,13 +8,11 @@ servers:
 paths:
   /status:
     $ref: "paths/status.yml"
-  /metaModels:
-    $ref: "paths/metaModels.yml"
-  /projectTypes/{metaModelId}:
+  /modelVariants:
+    $ref: "paths/modelVariants.yml"
+  /projectTypes/{modellVariantId}:
     $ref: "paths/projectTypes.yml"
-  /projectTypeVariants/{projectTypeId}:
-    $ref: "paths/projectTypeVariants.yml"
-  /projectFeatures:
+  /projectFeatures/{projectTypeVariantId}:
     $ref: "paths/projectFeatures.yml"
   /menuEntries:
     $ref: "paths/menuEntry.yml"
