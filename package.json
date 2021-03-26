@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": "true",
   "scripts": {
-    "build": "rm -rf dist && npm run generate:openapi && npm run generate:java && npm run generate:spring && npm run generate:typescript-rxjs",
+    "build": "rm -rf dist && npm run generate:openapi && npm run generate:spring && npm run generate:typescript-rxjs",
     "generate:openapi": "openapi-generator-cli generate -g openapi -i src/openapi.yml -o dist/openapi",
     "generate:java": "openapi-generator-cli generate -g java -i src/openapi.yml -o dist/java -c config/java.json",
     "generate:spring": "openapi-generator-cli generate -g spring -i src/openapi.yml -o dist/spring -c config/spring.json",
