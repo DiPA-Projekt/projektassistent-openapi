@@ -6,6 +6,11 @@ MenuEntry:
       type: integer
       format: int64
       example: 1
+    parentId:
+      description: Unique identifier of the parent Menu Entry
+        type: integer
+        format: int64
+        example: 1
     displayName:
       description: Text of the Menu Entry
       type: string
