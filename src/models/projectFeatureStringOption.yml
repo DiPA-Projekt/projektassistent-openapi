@@ -16,3 +16,4 @@ ProjectFeatureStringOption:
   required:
     - key
     - title
+    - answer
