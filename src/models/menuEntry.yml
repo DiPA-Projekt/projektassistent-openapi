@@ -6,13 +6,18 @@ MenuEntry:
       type: integer
       format: int64
       example: 1
+    parentId:
+      description: Unique identifier of the Menu Entry parent
+      type: integer
+      format: int64
+      example: 1
     displayName:
       description: Text of the Menu Entry
       type: string
       example: "Produkte"
     subMenuEntries:
       description: Short description text for the model variant
-      type: Array
+      type: array
       items:
         $ref: 'menuEntry.yml#/MenuEntry'
   required:
