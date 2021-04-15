@@ -47,7 +47,7 @@ jobs:
       - name: Configure Maven Pom for Spring
         run: node scripts/config-maven-pom-spring.js ${{ env.NPM_SCOPE }} ${{ env.PROJECT_NAME }}
       - name: Create package.json
-        run: node scripts/create-package-json.js ${{ env.NPM_SCOPE }}/${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
+        run: node scripts/create-package-json.js @${{ env.NPM_SCOPE }}/${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
       - name: Remove tsconfig.json
         run: rm tsconfig.json
         working-directory: dist/typescript-rxjs
