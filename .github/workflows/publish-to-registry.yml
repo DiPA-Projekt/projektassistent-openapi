@@ -55,14 +55,14 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      - name: Validate and publish Maven-Package (Spring)
+      - name: Validate, build and publish Maven-Package (Spring)
         run: |
           mvn clean compile
           mvn -B deploy
         working-directory: dist/spring
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Validate and publish NPM-Package
+      - name: Validate, build and publish NPM-Package
         run: |
           npm install
           npx tsc
