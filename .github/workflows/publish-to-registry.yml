@@ -38,8 +38,6 @@ jobs:
         run: |
           content=`cat dist/openapi/openapi.json | tr -d "\n"`
           echo "::set-output name=json::$content"
-      # - name: Configure Java
-      #   run: node scripts/configure-java.js ${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
       - name: Configure Spring
         run: node scripts/configure-spring.js ${{ env.PROJECT_NAME }} ${{fromJson(steps.openapi.outputs.json).info.version}}
       - name: Generate API for Java
@@ -48,8 +46,6 @@ jobs:
         run: npx openapi-generator-cli generate -g spring -i src/openapi.yml -c config/spring.json -o dist/spring
       - name: Generate API for NPM
         run: npx openapi-generator-cli generate -g typescript-rxjs -i src/openapi.yml -c config/typescript-rxjs.json -o dist/typescript-rxjs
-      # - name: Configure Maven Pom for Java
-      #   run: node scripts/config-maven-pom-java.js ${{ env.NPM_SCOPE }} ${{ env.PROJECT_NAME }}
       - name: Configure Maven Pom for Spring
         run: node scripts/config-maven-pom-spring.js ${{ env.NPM_SCOPE }} ${{ env.PROJECT_NAME }}
       - name: Create package.json
@@ -61,13 +57,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      # - name: Validate and publish Maven-Package (Java)
-      #   run: |
-      #     mvn clean compile
-      #     mvn -B deploy
-      #   working-directory: dist/java
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate and publish Maven-Package (Spring)
         run: |
           mvn clean compile
@@ -78,6 +67,7 @@ jobs:
       - name: Validate and publish NPM-Package
         run: |
           npm install
+          npx tsc
           npm publish --access restricted
         working-directory: dist/typescript-rxjs
         env:
