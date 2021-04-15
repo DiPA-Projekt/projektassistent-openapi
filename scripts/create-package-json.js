@@ -2,9 +2,16 @@ const fs = require("fs");
 fs.writeFileSync(
   "dist/typescript-rxjs/package.json",
   `{
-  "name": "@${process.argv[2]}",
+  "name": "${process.argv[2]}",
   "version": "${process.argv[3]}",
-  "description": "${process.argv[4]}"
+  "description": "This package contains the OpenAPI as RxJs implementation for ${process.argv[2]}.",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "prepack": "tsc"
+  }
 }`,
   {
     encoding: "utf8",
