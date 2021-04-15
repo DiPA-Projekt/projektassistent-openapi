@@ -5,6 +5,9 @@ fs.writeFileSync(
   "name": "${process.argv[2]}",
   "version": "${process.argv[3]}",
   "description": "This package contains the OpenAPI as RxJs implementation for ${process.argv[2]}.",
+  "devDependencies": {
+    "typescript": "4.2.4"
+  },
   "files": [
     "dist"
   ],

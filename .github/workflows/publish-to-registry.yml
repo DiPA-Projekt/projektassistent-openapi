@@ -65,7 +65,6 @@ jobs:
       - name: Validate, build and publish NPM-Package
         run: |
           npm install
-          npx tsc
           npm publish --access restricted
         working-directory: dist/typescript-rxjs
         env:
