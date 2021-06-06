@@ -11,7 +11,7 @@
     "update": "ncu -t minor -u && npm install"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "2.2.5",
+    "@openapitools/openapi-generator-cli": "2.3.3",
     "autochangelog": "3.0.3",
     "npm-check-updates": "11.6.0"
   }
