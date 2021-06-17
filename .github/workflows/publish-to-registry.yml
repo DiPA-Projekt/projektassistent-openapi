@@ -62,6 +62,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate, build and publish NPM-Package
         run: |
+          ls -la
           npm install
           npm publish --access restricted
         working-directory: dist/typescript-rxjs
