@@ -12,7 +12,7 @@
     "update": "ncu -t minor -u && npm install"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "2.3.7",
+    "@openapitools/openapi-generator-cli": "2.4.25",
     "autochangelog": "3.0.3",
     "npm-check-updates": "11.8.3"
   }
