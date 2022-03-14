@@ -8,13 +8,13 @@ servers:
 components:
   schemas:
     DataEntry:
-      $ref: "models/dataEntry.yml#/DataEntry"
+      $ref: "models/dataEntry.yml"
     PageEntry:
-      $ref: "models/pageEntry.yml#/PageEntry"
+      $ref: "models/pageEntry.yml"
     ProjectFeature:
-      $ref: "models/projectFeature.yml#/ProjectFeature"
+      $ref: "models/projectFeature.yml"
     TableEntry:
-      $ref: "models/tableEntry.yml#/TableEntry"
+      $ref: "models/tableEntry.yml"
 paths:
   /status:
     $ref: "paths/status.yml"
