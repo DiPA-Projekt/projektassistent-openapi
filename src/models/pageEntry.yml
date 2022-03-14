@@ -16,12 +16,12 @@ properties:
     description: Table entries which are sometimes displayed at the end of the page entry
     type: array
     items:
-      $ref: 'tableEntry.yml#/TableEntry'
+      $ref: 'tableEntry.yml'
   subPageEntries:
     description: sub page entries which are sometimes displayed below the table data of the page entry
     type: array
     items:
-      $ref: 'pageEntry.yml#/PageEntry'
+      $ref: 'pageEntry.yml'
 required:
   - id
   - header

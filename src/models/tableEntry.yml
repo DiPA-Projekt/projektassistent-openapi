@@ -12,7 +12,7 @@ properties:
     description: Entry on the right side of the table
     type: array
     items:
-      $ref: "./dataEntry.yml#/DataEntry"
+      $ref: "./dataEntry.yml"
 required:
   - id
   - descriptionEntry
