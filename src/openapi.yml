@@ -24,4 +24,4 @@ paths:
   /projectTypeVariants/{metaModelId}/{modelVariantId}:
     $ref: "paths/projectTypeVariants.yml"
   /menuEntries:
-    $ref: "paths/menuEntry.yml"
+    $ref: "paths/menuEntries.yml"
