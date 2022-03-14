@@ -1,0 +1,18 @@
+DataEntry:
+  type: object
+  properties:
+    id:
+      description: Unique identifier of the data entry
+      type: string
+      example: "1185c1249c99569d"
+    title:
+      description: Title of the data entry
+      type: string
+      example: "Projektvorstudie erstellen"
+    suffix:
+      description: Suffix of the data entry
+      type: string
+      example: "(Aktivität)"
+  required:
+    - id
+    - title

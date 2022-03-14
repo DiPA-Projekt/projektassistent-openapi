@@ -3,9 +3,8 @@ PageEntry:
   properties:
     id:
       description: Unique identifier of the Page
-      type: integer
-      format: int64
-      example: 1
+      type: string
+      example: "7d9bf684e9bf2c"
     header:
       description: Text of the header
       type: string
@@ -19,7 +18,11 @@ PageEntry:
       type: array
       items:
         $ref: 'tableEntry.yml#/TableEntry'
-
+    subPageEntries:
+      description: sub page entries which are sometimes displayed below the table data of the page entry
+      type: array
+      items:
+        $ref: 'pageEntry.yml#/PageEntry'
   required:
     - id
     - header

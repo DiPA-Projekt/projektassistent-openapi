@@ -3,18 +3,20 @@ MenuEntry:
   properties:
     id:
       description: Unique identifier of the Menu Entry
-      type: integer
-      format: int64
-      example: 1
+      type: string
+      example: "7d9bf684e9bf2c"
     parentId:
       description: Unique identifier of the Menu Entry parent
-      type: integer
-      format: int64
-      example: 1
+      type: string
+      example: "a323145412b2df6"
     displayName:
       description: Text of the Menu Entry
       type: string
-      example: "Produkte"
+      example: "Projekthandbuch"
+    displayIcon:
+      description: Icon of the Menu Entry
+      type: string
+      example: "team"
     subMenuEntries:
       description: Short description text for the model variant
       type: array
@@ -22,4 +24,5 @@ MenuEntry:
         $ref: 'menuEntry.yml#/MenuEntry'
   required:
     - id
+    - parentId
     - displayName

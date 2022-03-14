@@ -3,18 +3,18 @@ TableEntry:
   properties:
     id:
       description: Unique identifier of the table entry
-      type: integer
-      format: int64
-      example: 1
+      type: string
+      example: "56f6fb30c54fd7"
     descriptionEntry:
       description: Entry on the left side of the table
       type: string
-      example: "Erzeugt"
-    dataEntry:
+      example: "Projekt initialisiert"
+    dataEntries:
       description: Entry on the right side of the table
-      type: string
-      example: "Leistungsvereinbarung (SLA/OLA/UC)"
+      type: array
+      items:
+        $ref: "./dataEntry.yml#/DataEntry"
   required:
     - id
     - descriptionEntry
-    - dataEntry
+    - dataEntries
