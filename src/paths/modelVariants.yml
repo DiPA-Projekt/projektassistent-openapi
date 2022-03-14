@@ -6,11 +6,11 @@ get:
   operationId: getModelVariants
   parameters:
     - in: path
-    name: metaModelId
-    schema:
-      type: string
-    required: true
-    description: ID of the V-Model meta model.
+      name: metaModelId
+      schema:
+        type: string
+      required: true
+      description: ID of the V-Model meta model.
   responses:
     200:
       description: OK
