@@ -1,9 +1,16 @@
 get:
   tags:
-    - project
+    - tailoring
   summary: Model variants list
   description: Retrieves the list of available model variants.
   operationId: getModelVariants
+  parameters:
+    - in: path
+    name: metaModelId
+    schema:
+      type: string
+    required: true
+    description: ID of the V-Model meta model.
   responses:
     200:
       description: OK
