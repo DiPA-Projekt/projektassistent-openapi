@@ -5,15 +5,16 @@ info:
 servers:
   - url: http://localhost:9081/api/v1
     description: Development
-definitions:
-  DataEntry:
-    $ref: "./dataEntry.yml#/DataEntry"
-  PageEntry:
-    $ref: "./pageEntry.yml#/PageEntry"
-  ProjectFeature:
-    $ref: "./projectFeature.yml#/ProjectFeature"
-  TableEntry:
-    $ref: "./tableEntry.yml#/TableEntry"
+components:
+  schemas:
+    DataEntry:
+      $ref: "models/dataEntry.yml#/DataEntry"
+    PageEntry:
+      $ref: "models/pageEntry.yml#/PageEntry"
+    ProjectFeature:
+      $ref: "models/projectFeature.yml#/ProjectFeature"
+    TableEntry:
+      $ref: "models/tableEntry.yml#/TableEntry"
 paths:
   /status:
     $ref: "paths/status.yml"
