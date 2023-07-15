@@ -1,0 +1,16 @@
+post:
+  tags:
+    - products
+  summary: create a new multi products zip file
+  description: Creates multiple products for one project and zips them in a temporary zip file
+  operationId: getZipForMultiProducts
+  requestBody:
+    description: multi products as request body
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../models/multiProducts.yml#/MultiProducts"
+  responses:
+    204:
+      description: The zip file for multi products was created successfully.
