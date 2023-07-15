@@ -1,0 +1,25 @@
+ProductOfProject:
+  type: object
+  properties:
+    productName:
+      description: Product name
+      type: string
+      example: "Projektauftrag"
+    responsible:
+      description: Product responsible
+      type: string
+      example: "Projektauftraggeber"
+    participants:
+      description: List of participants
+      type: array
+      items:
+        type: string
+    chapters:
+      description: List of chapters
+      type: array
+      items:
+        $ref: './chapterEntry.yml#/Chapter'
+  required:
+    - productName
+    - responsible
+    - chapters

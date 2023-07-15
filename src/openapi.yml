@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: projektassistent-openapi
-  version: 0.2.4
+  version: 0.2.5
 servers:
   - url: http://localhost:9081/api/v1
     description: Development
@@ -26,3 +26,7 @@ paths:
     $ref: "paths/projectTypeVariants.yml"
   /menuEntries:
     $ref: "paths/menuEntries.yml"
+  /product:
+    $ref: "paths/product.yml"
+  /products:
+    $ref: "paths/products.yml"
