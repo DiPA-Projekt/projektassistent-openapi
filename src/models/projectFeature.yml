@@ -43,17 +43,9 @@ components:
           type: array
           items:
             $ref: "./projectFeatureBooleanOption.yml#/ProjectFeatureBooleanOption"
-        answers:
-          description: anser given for each possible value
-          type: array
-          items:
-            type: string
-          example: ["Ja, eine kaufmännische Projektplanung und -verfolgung ist notwendig",
-                    "Nein, eine kaufmännische Projektplanung und -verfolgung ist nicht notwendig"]
       required:
         - selectedValue
         - possibleValues
-        - answers
       allOf:
         - $ref: 'projectFeature.yml#/ProjectFeature'
         - type: object

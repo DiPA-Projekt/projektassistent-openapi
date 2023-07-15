@@ -17,7 +17,7 @@ MenuEntry:
       example: "Produkte"
     subMenuEntries:
       description: Short description text for the model variant
-      type: Array
+      type: array
       items:
         $ref: 'menuEntry.yml#/MenuEntry'
   required:
