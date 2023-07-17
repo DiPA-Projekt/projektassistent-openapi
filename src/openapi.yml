@@ -5,31 +5,9 @@ info:
 servers:
   - url: http://localhost:9081/api/v1
     description: Development
-components:
-  schemas:
-    DataEntry:
-      $ref: "models/dataEntry.yml"
-    PageEntry:
-      $ref: "models/pageEntry.yml"
-    ProjectFeature:
-      $ref: "models/projectFeature.yml"
-    TableEntry:
-      $ref: "models/tableEntry.yml"
-    ChapterEntry:
-      $ref: "models/chapterEntry.yml"
 paths:
   /status:
     $ref: "paths/status.yml"
-  /modelVariants:
-    $ref: "paths/modelVariants.yml"
-  /projectTypes/{modelVariantId}:
-    $ref: "paths/projectTypes.yml"
-  /projectFeatures/{projectTypeVariantId}:
-    $ref: "paths/projectFeatures.yml"
-  /menuEntries:
-    $ref: "paths/menuEntry.yml"
-  /page/{pageId}:
-    $ref: "paths/page.yml"
   /product:
     $ref: "paths/product.yml"
   /products:
