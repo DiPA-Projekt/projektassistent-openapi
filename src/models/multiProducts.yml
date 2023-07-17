@@ -1,0 +1,15 @@
+MultiProducts:
+  type: object
+  properties:
+    projectName:
+      description: Project name
+      type: string
+      example: "Mein Projekt"
+    products:
+      description: List of products
+      type: array
+      items:
+        $ref: './productOfProjects.yml#/ProductOfProject'
+  required:
+    - projectName
+    - products

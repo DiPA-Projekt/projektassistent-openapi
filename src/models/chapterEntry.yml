@@ -1,0 +1,13 @@
+Chapter:
+  type: object
+  properties:
+    title:
+      description: Title of the chapter
+      type: string
+      example: "Erstes Kapitel"
+    text:
+      description: Content of the chapter
+      type: string
+      example: "Hier könnte ihre Werbung stehen..."
+  required:
+    - title

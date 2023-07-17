@@ -1,0 +1,16 @@
+post:
+  tags:
+    - products
+  summary: create a new product docx file
+  description: Creates a single product and returns a docx file
+  operationId: getDocxForSingleProduct
+  requestBody:
+    description: product as request body
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: "../models/singleProduct.yml#/SingleProduct"
+  responses:
+    204:
+      description: The docx file for single product was created successfully.
