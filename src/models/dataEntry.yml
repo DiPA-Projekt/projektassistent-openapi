@@ -1,17 +1,22 @@
-type: object
-properties:
-  id:
-    description: Unique identifier of the data entry
-    type: string
-    example: "1185c1249c99569d"
-  title:
-    description: Title of the data entry
-    type: string
-    example: "Projektvorstudie erstellen"
-  suffix:
-    description: Suffix of the data entry
-    type: string
-    example: "(Aktivität)"
-required:
-  - id
-  - title
+DataEntry:
+  type: object
+  properties:
+    title:
+      description: Title of a table data entry
+      type: string
+      example: "Anbahnung und Organisation"
+    suffix:
+      description: Suffix of a table data entry
+      type: string
+      example: "(Aktivität)"
+    type:
+      description: Type of a table data entry
+      type: string
+      example: "bold"
+    menuEntryId:
+      description: Unique identifier of the target data entry
+      type: integer
+      format: int64
+      example: 18
+  required:
+    - title

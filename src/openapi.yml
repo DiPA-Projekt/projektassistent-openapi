@@ -15,17 +15,21 @@ components:
       $ref: "models/projectFeature.yml"
     TableEntry:
       $ref: "models/tableEntry.yml"
+    ChapterEntry:
+      $ref: "models/chapterEntry.yml"
 paths:
   /status:
     $ref: "paths/status.yml"
-  /modelVariants/{metaModelId}:
+  /modelVariants:
     $ref: "paths/modelVariants.yml"
-  /projectTypes/{metaModelId}/{modelVariantId}:
+  /projectTypes/{modelVariantId}:
     $ref: "paths/projectTypes.yml"
-  /projectTypeVariants/{metaModelId}/{modelVariantId}:
-    $ref: "paths/projectTypeVariants.yml"
+  /projectFeatures/{projectTypeVariantId}:
+    $ref: "paths/projectFeatures.yml"
   /menuEntries:
-    $ref: "paths/menuEntries.yml"
+    $ref: "paths/menuEntry.yml"
+  /page/{pageId}:
+    $ref: "paths/page.yml"
   /product:
     $ref: "paths/product.yml"
   /products:
