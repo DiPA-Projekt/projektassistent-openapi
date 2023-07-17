@@ -1,35 +1,36 @@
-type: object
-properties:
-  id:
-    description: Unique identifier of the Page
-    type: string
-    example: "7d9bf684e9bf2c"
-  header:
-    description: Text of the header
-    type: string
-    example: "Produkte"
-  descriptionText:
-    description: First text on the page which describes the pages content
-    type: string
-    example: "Das V-Modell ist ein generischer Vorgehensstandard, der für ein konkretes Projekt angepasst und konkretisiert werden muss..."
-  tableEntries:
-    description: Table entries which are sometimes displayed at the end of the page entry
-    type: array
-    items:
-      $ref: 'tableEntry.yml'
-  subPageEntries:
-    description: sub page entries which are sometimes displayed below the table data of the page entry
-    type: array
-    items:
-      $ref: 'pageEntry.yml'
-  dataSource:
-    description: dataSource of react table
-    type: array
-  columns:
-    description: columns of react table
-    type: object
-required:
-  - id
-  - header
-  - descriptionText
-  - tableEntries
+PageEntry:
+  type: object
+  properties:
+    id:
+      description: Unique identifier of the Page
+      type: string
+      example: "7d9bf684e9bf2c"
+    header:
+      description: Text of the header
+      type: string
+      example: "Produkte"
+    descriptionText:
+      description: First text on the page which describes the pages content
+      type: string
+      example: "Das V-Modell ist ein generischer Vorgehensstandard, der für ein konkretes Projekt angepasst und konkretisiert werden muss..."
+    tableEntries:
+      description: Table entries which are sometimes displayed at the end of the page entry
+      type: array
+      items:
+        $ref: 'tableEntry.yml#/TableEntry'
+    subPageEntries:
+      description: sub page entries which are sometimes displayed below the table data of the page entry
+      type: array
+      items:
+        $ref: 'pageEntry.yml#/PageEntry'
+    dataSource:
+      description: dataSource of react table
+      type: array
+    columns:
+      description: columns of react table
+      type: object
+  required:
+    - id
+    - header
+    - descriptionText
+    - tableEntries
