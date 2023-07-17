@@ -1,5 +1,3 @@
-> 🏗 Das Repository befindet sich noch im Aufbau.
-
 # OpenAPI des Projektassistenten
 
 ## Organisation

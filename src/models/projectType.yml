@@ -3,18 +3,12 @@ ProjectType:
   properties:
     id:
       description: Unique identifier of the project type
-      type: integer
-      format: int64
-      example: 1
+      type: string
+      example: "1198efd47f592ad"
     name:
       description: Name of the project type
       type: string
       example: "Systementwicklungsprojekt (AG)"
-    variants:
-      description: Possible Project Type Variants
-      type: array
-      items:
-        $ref: "./projectTypeVariant.yml#/ProjectTypeVariant"
   required:
     - id
     - name
