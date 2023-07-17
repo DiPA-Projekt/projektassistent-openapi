@@ -18,7 +18,7 @@ ProductOfProject:
       description: List of chapters
       type: array
       items:
-        $ref: './chapterEntry.yml#/Chapter'
+        $ref: './chapterEntry.yml'
   required:
     - productName
     - responsible
