@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: projektassistent-openapi
-  version: 0.2.5.rc1
+  version: 0.2.5-rc.2
 servers:
   - url: http://localhost:9081/api/v1
     description: Development
