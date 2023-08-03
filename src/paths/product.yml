@@ -12,5 +12,12 @@ post:
         schema:
           $ref: "../models/singleProduct.yml#/SingleProduct"
   responses:
+    200:
+      description: OK
+      content:
+        application/octet-stream:
+          schema:
+            type: string
+            format: binary
     204:
       description: The docx file for single product was created successfully.
