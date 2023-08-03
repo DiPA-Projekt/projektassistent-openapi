@@ -12,5 +12,12 @@ post:
         schema:
           $ref: "../models/multiProducts.yml#/MultiProducts"
   responses:
+    200:
+      description: OK
+      content:
+        application/octet-stream:
+          schema:
+            type: string
+            format: binary
     204:
       description: The zip file for multi products was created successfully.
