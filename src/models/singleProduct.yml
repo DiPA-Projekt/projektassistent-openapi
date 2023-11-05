@@ -5,6 +5,10 @@ SingleProduct:
       description: Product name
       type: string
       example: "Projektauftrag"
+    disciplineName:
+      description: Discipline name
+      type: string
+      example: "Anbahnung und Organisation"
     responsible:
       description: Product responsible
       type: string
