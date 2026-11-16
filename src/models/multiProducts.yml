@@ -5,6 +5,15 @@ MultiProducts:
       description: Project name
       type: string
       example: "Mein Projekt"
+    modelVariantId:
+      description: ID of the selected model variant in the tailoring service
+      type: string
+    projectTypeId:
+      description: ID of the selected project type in the tailoring service
+      type: string
+    projectTypeVariantId:
+      description: ID of the selected project type variant in the tailoring service
+      type: string
     products:
       description: List of products
       type: array
